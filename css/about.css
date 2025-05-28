@@ -5,6 +5,14 @@
     background-color: #1F1F1F;
 }
 
+.li_nav_active{
+    background-color: #F3EBDD;
+}
+
+.active{
+    color: #1F1F1F;
+}
+
 .div_about{
     display: flex;
     overflow: hidden;

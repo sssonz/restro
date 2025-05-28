@@ -63,7 +63,7 @@ nav{
     width: fit-content;
 }
 
-.li_nav{
+.li_nav, .li_nav_active{
     list-style: none;
     display: flex;
     padding: 0vw 0.7813vw 0.0015vw 0.7813vw;
