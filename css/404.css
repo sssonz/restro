@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    overscroll-behavior: none;
+    background-color: #F3EBDD;
+    align-items: center;
+    height: 100%;
+}
+
+.div_404{
+    display: flex;
+    overflow: hidden;
+    padding: 0.5208vw;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5208vw;
+}
+
+.d_404_rt, .d_404_lf{
+    background-color: #FF6749;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img_404{
+    height: 100%;
+}
+
+.d_404_lf{
+    text-align: right
+}
+
+.div_back{
+    overflow: hidden;
+    position: absolute;
+    color: #F3EBDD;
+    text-transform: uppercase;
+    background-color: #1F1F1F;
+    border-radius: 50px;
+    overflow: hidden;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
