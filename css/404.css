@@ -29,7 +29,8 @@ body {
 }
 
 .d_404_lf{
-    text-align: right
+    display: flex;
+    justify-content: flex-end;
 }
 
 .div_back{

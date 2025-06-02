@@ -30,15 +30,15 @@ h2{
     color: #1F1F1F;
     font-family: 'h2_medium';
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 1.8750vw;
 }
 
 p{
     text-decoration: none;
     color: #1F1F1F;
     font-family: 'h5_main';
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.0417vw;
+    line-height: 1.4583vw;
 }
 
 .div_merch{
@@ -65,19 +65,19 @@ p{
     gap: 0.2604vw;
 }
 
-.h6{
+.h6_medium{
     text-decoration: none;
     color: #1F1F1F;
     font-family: 'h6_medium';
-    font-size: 16px;
+    font-size: 0.8333vw;
     text-transform: uppercase;
 }
 
-.h5{
+.h5_medium{
     text-decoration: none;
     color: #1F1F1F;
     font-family: 'h5_medium';
-    font-size: 20px;
+    font-size: 1.0417vw;
     text-transform: uppercase;
 }
 

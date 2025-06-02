@@ -1,35 +1,89 @@
 let scrollPosition = 0;
-const abImg = document.querySelector('.ab_img');
-const abDiv = document.querySelector('.ab');
-const stImg = document.querySelector('.st_img');
-const stDiv = document.querySelector('.st');
 
-const AB_MIN_SCROLL = 0; // Минимальная позиция (не уезжаем влево)
-const AB_MAX_SCROLL = window.innerWidth * 0.8; // Максимум вправо (80% ширины экрана)
+const sections = [
+{
+container: document.querySelector('.div_ab'),
+img: document.querySelector('.ab_img'),
+text: document.querySelector('.ab'),
+start: 0,
+active: false,
+animated: true
+},
+{
+container: document.querySelector('.div_st'),
+img: document.querySelector('.st_img'),
+text: document.querySelector('.st'),
+start: window.innerWidth, 
+active: false,
+animated: true
+},
+{
+container: document.querySelector('.div_sh'),
+img: document.querySelector('.sh_img'),
+text: document.querySelector('.sh'),
+start: window.innerWidth * 2,
+active: false,
+animated: true
+},
+{
+container: document.querySelector('.div_ev'),
+img: document.querySelector('.ev_img'),
+text: document.querySelector('.ev'),
+start: window.innerWidth * 3,
+active: false,
+animated: true
+},
+{
+container: document.querySelector('.div_bo'),
+img: document.querySelector('.bo_img'),
+text: document.querySelector('.bo'),
+start: window.innerWidth * 4,
+active: false,
+animated: false
+}
+];
 
-const ST_START_POSITION = window.innerWidth / 2; // Когда начинает двигаться st
-const ST_MAX_OFFSET = window.innerWidth * 0.25; // Максимальное смещение st
+const SECTION_WIDTH = window.innerWidth;
+const MAX_SCROLL = SECTION_WIDTH * (sections.length - 1);
 
 document.addEventListener('wheel', (event) => {
-    event.preventDefault();
-    
-    scrollPosition += event.deltaY * 0.5;
-    scrollPosition = Math.max(AB_MIN_SCROLL, Math.min(scrollPosition, AB_MAX_SCROLL));
+event.preventDefault();
 
-    abImg.style.transform = `translateX(${-scrollPosition}px)`; // Влево
-    abDiv.style.transform = `translateX(${scrollPosition}px)`; // Вправо
+scrollPosition += event.deltaY;
+scrollPosition += event.deltaX;
+scrollPosition = Math.max(0, Math.min(scrollPosition, MAX_SCROLL));
 
-    if (scrollPosition >= ST_START_POSITION) {
-        // st начинает двигаться только после половины прокрутки ab
-        const stOffset = Math.min(
-            (scrollPosition - ST_START_POSITION) * 0.5, // Замедление
-            ST_MAX_OFFSET // Не дальше 25% ширины экрана
-        );
-        stImg.style.transform = `translateX(${-stOffset}px)`;
-        stDiv.style.transform = `translateX(${stOffset}px)`;
-    } else {
-        // Если ab ещё не доехал до середины — st на месте
-        stImg.style.transform = `translateX(0)`;
-        stDiv.style.transform = `translateX(0)`;
-    }
+sections.forEach((section, index) => {
+const { container, img, text, start, animated } = section;
+const end = start + SECTION_WIDTH/1.7;
+if (scrollPosition >= start && scrollPosition < end) {
+  // Активный блок
+  section.active = true;
+  container.style.display = 'flex';
+
+  const localScroll = scrollPosition - start;
+  const offset = Math.min(localScroll, SECTION_WIDTH);
+
+  if (animated) {
+    img.style.transform = `translateX(${-offset}px)`;
+    text.style.transform = `translateX(${offset}px)`;
+  } else {
+    img.style.transform = `translateX(0)`;
+    text.style.transform = `translateX(0)`;
+  }
+} else if (scrollPosition < start) {
+  // До появления блока — сброс
+  section.active = false;
+  container.style.display = 'flex';
+
+  if (animated) {
+    img.style.transform = `translateX(0)`;
+    text.style.transform = `translateX(0)`;
+  }
+} else if (scrollPosition >= end) {
+  // После ухода блока — скрыть
+  section.active = false;
+  container.style.display = 'none';
+}
+});
 }, { passive: false });
