@@ -106,4 +106,5 @@ li a:hover:before{
     text-transform: uppercase;
     background-color: #1F1F1F;
     border-radius: 50px;
+    cursor: pointer;
 }
