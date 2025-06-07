@@ -10,25 +10,66 @@
     <title>restro</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/x-icon" href="./img/Ic.ico"/>
-    <script src="./js/main.js"></script>
 </head>
-<body>
+<body class="body_station">
     <img class="logo" src="./img/Logo.svg" href="./about.html" alt="">
     <nav>
-        <div class="div_nav">
+        <div class="div_nav_bl">
             <ul class="ul_nav">
-                <li class="li_nav"><a data-text='о нас' href="./about.html">о нас</a></li>
-                <li class="li_nav_active"><a class="active" data-text='станция' href="./station.html">станция</a></li>
-                <li class="li_nav"><a data-text='магазин' href="./shop.html">магазин</a></li>
-                <li class="li_nav"><a data-text='события' href="./events.html">события</a></li>
-                <li class="li_nav"><a data-text='книга' href="./book.html">книга</a></li>
+                <li class="li_nav"><a class="a_bl" data-text='о нас' href="./about.html">о нас</a></li>
+                <li class="li_nav_active_bl"><a class="active_bl" data-text='станция' href="./station.html">станция</a></li>
+                <li class="li_nav"><a class="a_bl" data-text='магазин' href="./shop.html">магазин</a></li>
+                <li class="li_nav"><a class="a_bl" data-text='события' href="./events.html">события</a></li>
+                <li class="li_nav"><a class="a_bl" data-text='книга' href="./book.html">книга</a></li>
             </ul>
         </div>
-        <div class="div_footer">
+        <div class="div_footer_bl">
             <ul class="ul_nav">
-                <li class="li_nav"><a data-text='контакты'>контакты</a></li>
+                <li class="li_nav"><a class="a_bl" data-text='контакты'>контакты</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
+    <div class="footer_bl" style="display: none;">
+        <div class="mail">
+            <h2 class="foot_h2_bl">Подпишись на рассылку</h2>
+            <input class="imp_email_bl" type="email_sub_bl" id="email" placeholder="Почта">
+            <div class="div_sub_bl">
+                <ul class="ul_nav">
+                    <li class="li_nav"><a class="a_footer_bl" data-text='Подписаться'>Подписаться</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="service">
+            <h2 class="foot_h2_bl">Сервисы</h2>
+            <div class="ser">
+                <p class="h5_med">Забронировать стол</p>
+                <p class="h5_med">Расписание событий</p>
+            </div>
+        </div>
+        <div class="contacts">
+            <h2 class="foot_h2_bl">Контакты</h2>
+            <div class="social">
+                <img class="soc" src="./img/Media_tg.svg" alt="">
+                <img class="soc" src="./img/Media_vk.svg" alt="">
+                <img class="soc" src="./img/Media_be.svg" alt="">
+            </div>
+        </div>
+        <div class="div_footer_close_bl">
+            <ul class="ul_nav">
+                <li class="li_nav"><a class="a_footer_bl" data-text='закрыть'>Закрыть</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-overlay_bl" style="display: none;"></div>
+        <div class="modal-sub" style="display: none;">
+        <div class="mod">
+            <h2 class="mod_h2">Спасибо</h2>
+            <div class="modal-close">
+                <div class="close"></div>
+            </div>
+        </div>
+        <p class="h6_regular">Рассылка приходит на почту раз в неделю</p>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>

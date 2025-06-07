@@ -1,23 +1,19 @@
-html, body, .div_main {
-    width: 100%;
-    height: 100%;
+.body_station{
+    background-color: #1F1F1F;
 }
 
-body{
-    display: block;
-    overscroll-behavior: none;
+.div_nav_bl{
     background-color: #F3EBDD;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+.a_bl{
+    color: #1F1F1F;
 }
 
-.logo{
-    top: 2.0833vw;
-    left: 2.6042vw;
-    overflow: hidden;
-    position: fixed;
-    z-index: 2;
-    height: 2.0833vw;
+.li_nav_active_bl{
+    background-color: #1F1F1F;
+}
+
+.active_bl{
+    color: #F3EBDD;
 }

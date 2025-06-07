@@ -21,6 +21,7 @@ body{
     position: fixed;
     z-index: 2;
     height: 2.0833vw;
+    cursor: pointer;
 }
 
 .div_main{
@@ -39,16 +40,14 @@ body{
 nav{
     bottom: 2.0833vw;
     left: 2.6042vw;
-    overflow: hidden;
     position: fixed;
     color: #F3EBDD;
     text-transform: uppercase;
 }
 
-.div_nav{
+.div_nav, .div_nav_bl{
     background-color: #1F1F1F;
     border-radius: 50px;
-    overflow: hidden;
 }
 
 .ul_nav{
@@ -64,7 +63,7 @@ nav{
     width: fit-content;
 }
 
-.li_nav, .li_nav_active{
+.li_nav, .li_nav_active, .li_nav_active_bl{
     list-style: none;
     display: flex;
     padding: 0vw 0.7813vw 0.0015vw 0.7813vw;
@@ -97,7 +96,7 @@ li a:hover:before{
     display:block;
 }
 
-.div_footer{
+.div_footer, .div_footer_close, .div_sub, .div_footer_bl, .div_footer_close_bl, .div_sub_bl{
     bottom: 2.0833vw;
     right: 2.6042vw;
     overflow: hidden;
@@ -107,4 +106,110 @@ li a:hover:before{
     background-color: #1F1F1F;
     border-radius: 50px;
     cursor: pointer;
+}
+
+.div_footer_bl{
+    background-color: #F3EBDD;
+}
+
+.footer, .footer_bl{
+    background-color: #1F1F1F;
+    bottom: 0.5208vw;
+    border-radius: 20px;
+    left: 0.5208vw;
+    right: 0.5208vw;
+    overflow: hidden;
+    position: fixed;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1.5625vw 2.0833vw;
+}
+
+.footer_bl{
+    background-color: #F3EBDD;
+}
+
+.mail, .service, .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5.7292vw;
+}
+
+.foot_h2, .foot_h2_bl{
+    text-decoration: none;
+    color: #F3EBDD;
+    font-family: 'h2_regular';
+    text-transform: uppercase;
+    font-size: 1.8750vw;
+}
+
+.foot_h2_bl{
+    color: #1F1F1F;
+}
+
+.ser{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1vw;
+}
+
+.h5_med{
+    text-decoration: none;
+    color: #797672;
+    font-family: 'h5_medium';
+    font-size: 1.0417vw;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.social{
+    display: flex;
+    gap: 0.7813vw;
+}
+
+.soc{
+    height: 2.2917vw;
+    width: 2.2917vw;
+    cursor: pointer;
+}
+
+.div_footer_close, .div_footer_close_bl{
+    position: static;
+    color: #1F1F1F;
+    text-transform: uppercase;
+    background-color: #F3EBDD;
+}
+
+.div_footer_close_bl{
+    background-color: #1F1F1F;
+}
+
+.div_sub, .div_sub_bl{
+    color: #1F1F1F;
+    text-transform: uppercase;
+    background-color: #F3EBDD;
+    bottom: 2.2vw;
+    right: 72.25vw;
+}
+
+.div_sub_bl{
+    background-color: #1F1F1F;
+}
+
+.a_footer{
+    color: #1F1F1F;
+}
+
+.a_footer_bl{
+    color: #F3EBDD;
+}
+
+.imp_email, .imp_email_bl{
+    width: 25.2604vw;
+}
+
+.imp_email_bl{
+    border: 0.0521vw solid #1F1F1F;
+    background: #F3EBDD;
 }
