@@ -1,3 +1,84 @@
 .body_events{
     background-color: #1F1F1F;
+    height: 213vh;
+    overflow: hidden;
+    align-items: start;
+    margin-top: 12.0370vh;
+    justify-items: end;
+}
+
+.div_even{
+    display: flex;
+    height: 75.7407vh;
+    flex-direction: row-reverse;
+    gap: 6.25vw;
+    position: fixed;
+}
+
+.even_1, .even_2, .even_3, .even_4, .even_5, .even_6, .even_7, .even_8, .even_9, .even_10, .even_11{
+    display: flex;
+    height: 46.2963vh;
+    gap: 1.5625vw;
+    margin-right: 2.6042vw;
+    margin-top: 29.4444vh;
+    cursor: pointer;
+}
+
+.even_2, .even_6, .even_9{
+    height: 64.8148vh;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.even_3, .even_8{
+    height: 37.0370vh;
+    margin-right: 0;
+    margin-top: 34.0741vh;
+}
+
+.even_4, .even_7, .even_11{
+    height: 27.7778vh;
+    margin-right: 0;
+    margin-top: 4.6296vh;
+}
+
+.even_5{
+    margin-right: 0;
+}
+
+.even_6{
+    margin-top: 5.4630vh;
+}
+
+.even_7{
+    margin-top: 0;
+}
+
+.even_10{
+    margin-right: 0;
+}
+
+.even_11{
+    margin-left: 2.6042vw;
+}
+
+.img_even{
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.div_text_ev{
+    display: flex;
+    flex-direction: column;
+    width: 13.1771vw;
+    gap: 1.5625vw;
+}
+
+.p_bl{
+    color: #F3EBDD;
+}
+
+.div_visit{
+    background-color: #F3EBDD;
 }

@@ -97,7 +97,7 @@ h1{
     font-size: 3.1250vw;
 }
 
-.div_det, .div_send{
+.div_det, .div_send, .div_visit, .div_send_bl{
     overflow: hidden;
     color: #F3EBDD;
     text-transform: uppercase;

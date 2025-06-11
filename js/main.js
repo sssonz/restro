@@ -24,17 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeButton) {
     closeButton.addEventListener('click', () => {
       footer.style.display = 'none'; // Скрываем .footer
+      emailInput.value = ''; // Очищаем поле ввода
+      emailInput.style.borderColor = ''; // Сбрасываем обводку
     });
   }
 
   // Проверка email и открытие модального окна
-  const emailInput = document.querySelector('.imp_email');
-  const emailInp = document.querySelector('imp_email_bl'); // Предполагаем, что это поле ввода email
-  const subscribeButton = document.querySelector('.div_sub');
-  const subscribeBut = document.querySelector('.div_sub_bl');
-  const modalSend = document.querySelector('.modal-sub');
+  const emailInput = document.querySelector('.imp_email, .imp_email_bl');
+  const subscribeButton = document.querySelector('.div_sub, .div_sub_bl');
+  const modalSend = document.querySelector('.modal-sub, .modal-sub_bl');
   const modalOverlay = document.querySelector('.modal-overlay, .modal-overlay_bl');
-  const modalClose = document.querySelector('.modal-close');
+  const modalClose = document.querySelector('.modal-close, .modal-close_bl');
 
   if (subscribeButton) {
     subscribeButton.addEventListener('click', () => {
@@ -47,21 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.style.borderColor = ''; // Сбрасываем обводку
       } else {
         emailInput.style.borderColor = 'red'; // Устанавливаем красную обводку
-      }
-    });
-  }
-
-  if (subscribeBut) {
-    subscribeBut.addEventListener('click', () => {
-      const emailValue = emailInp.value.trim();
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Проверка на наличие @
-
-      if (emailPattern.test(emailValue)) {
-        modalSend.style.display = 'flex'; // Показываем модальное окно
-        modalOverlay.style.display = 'block'; // Показываем фон
-        emailInput.style.borderColor = ''; // Сбрасываем обводку
-      } else {
-        emailInp.style.borderColor = 'red'; // Устанавливаем красную обводку
       }
     });
   }

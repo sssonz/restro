@@ -58,7 +58,7 @@ nav{
     z-index: 2;
     overflow:hidden;
     text-align:center;
-    padding: 0.2604vw;
+    padding: 0.2vw 0.2604vw 0.2604vw 0.2604vw;
     gap: 0.2604vw;
     width: fit-content;
 }
@@ -96,7 +96,7 @@ li a:hover:before{
     display:block;
 }
 
-.div_footer, .div_footer_close, .div_sub, .div_footer_bl, .div_footer_close_bl, .div_sub_bl{
+.div_footer, .div_footer_close, .div_sub, .div_footer_bl, .div_footer_close_bl, .div_sub_bl, .div_cirkle_bl{
     bottom: 2.0833vw;
     right: 2.6042vw;
     overflow: hidden;
@@ -108,7 +108,7 @@ li a:hover:before{
     cursor: pointer;
 }
 
-.div_footer_bl{
+.div_footer_bl, .div_cirkle_bl{
     background-color: #F3EBDD;
 }
 
@@ -212,4 +212,54 @@ li a:hover:before{
 .imp_email_bl{
     border: 0.0521vw solid #1F1F1F;
     background: #F3EBDD;
+}
+
+.mob_h2_bl{
+    color: #1F1F1F;   
+}
+
+.circle_1, .circle_2, .circle_3, .circle_4, .circle_5{
+    position: absolute;
+    height: 2.1875vw;
+    width: 8.4375vw;
+    margin-top: 7.3vh;
+    margin-left: 41vw;
+}
+
+.circle_2{
+    width: 6.8750vw;
+    margin-top: 20vh;
+    margin-left: 9vw;
+}
+
+.circle_3{
+    width: 8.4896vw;
+    margin-top: 74vh;
+    margin-left: 21.5vw;
+}
+
+.circle_4{
+    width: 8.75vw;
+    margin-top: 54vh;
+    margin-left: 46.5vw;
+}
+
+.circle_5{
+    width: 7.0313vw;
+    margin-top: 79vh;
+    margin-left: 80vw;
+}
+
+.img_circle, .img_circle_bl{
+    position: absolute;
+    width: 1.6667vw;
+    height: 1.6667vw;
+    margin-top: 0.2604vw;
+    margin-left: 0.2604vw;
+    cursor: pointer;
+}
+
+.div_cirkle_bl{
+    position: static;
+    justify-items: end;
 }
