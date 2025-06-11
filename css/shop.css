@@ -77,7 +77,6 @@ p{
 .mer_9, .mer_8, .mer_7, .mer_6, .mer_5, .mer_4, .mer_3, .mer_2, .mer_1{
     border-radius: 20px;
     overflow: hidden;
-    background-color: aquamarine;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -134,7 +133,7 @@ p{
     align-items: center;
 }
 
-.mer, .modal-close, .modal-close_bl{
+.mer, .modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl{
     width: 2.2917vw;
     height: 2.2917vw;
     border-radius: 50px;
@@ -147,22 +146,22 @@ p{
     cursor: pointer;
 }
 
-.modal-close, .modal-close_bl{
+.modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl{
     background-image: url(../img/Close.svg);
     background-size: 45%;
     transition: background-color 0.3s ease;
 }
 
-.modal-close:hover {
+.modal-close, .mod-close, .send-close:hover {
     background-color: #F3EBDD;
     background-image: url(../img/Close_black.svg);
 }
 
-.modal-close_bl{
+.modal-close_bl, .mod-close_bl, .send-close_bl{
     background-color: #797672;
 }
 
-.modal-close_bl:hover{
+.modal-close_bl, .mod-close_bl, .send-close_bl:hover{
     background-color: #1F1F1F;
     background-image: url(../img/Close.svg);
 }
@@ -213,6 +212,8 @@ input {
     font-size: 1.0417vw;
     line-height: 1.4583vw;
     padding: 0.3646vw 0 0.5208vw 1.0417vw;
+    -webkit-text-fill-color: #797672;
+    -webkit-box-shadow: 0 0 0px 1000px #1F1F1F inset;
 }
 
 input.error {
@@ -222,6 +223,8 @@ input.error {
 .imp{
     border: 0.0521vw solid #1F1F1F;
     background: #F3EBDD;
+    -webkit-text-fill-color: #797672;
+    -webkit-box-shadow: 0 0 0px 1000px #F3EBDD inset;
 }
 
 .modal-send, .modal-sub, .modal-sub_bl, .modal-send_bl{

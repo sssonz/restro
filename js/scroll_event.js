@@ -1,9 +1,10 @@
 let scrollPos = 0;
 const evenContainer = document.querySelector('.div_even');
-const closeModalButton = document.querySelector('.modal-close_bl');
-const modalOverlayBl = document.querySelector('.modal-overlay_bl');
-const modalSend = document.querySelector('.modal-send_bl');
-const modalWindow = document.querySelector('.modal-window_bl');
+const closeButton = document.querySelector('.mod-close_bl');
+const closeBut = document.querySelector('.send-close_bl');
+const modOverlayBl = document.querySelector('.modal-overlay_bl');
+const modSend = document.querySelector('.modal-send_bl');
+const modWindow = document.querySelector('.modal-window_bl');
 
 // Горизонтальный скролл по колесу мыши
 document.addEventListener('wheel', (event) => {
@@ -44,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   divVisitElements.forEach(divVisit => {
     divVisit.addEventListener('click', () => {
-      if (modalOverlayBl && modalWindow) {
-        modalOverlayBl.style.display = 'block';
-        modalWindow.style.display = 'flex';
+      if (modOverlayBl && modWindow) {
+        modOverlayBl.style.display = 'block';
+        modWindow.style.display = 'flex';
       }
     });
   });
@@ -56,8 +57,6 @@ document.querySelector('.div_send_bl').addEventListener('click', () => {
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
-  const modalSend = document.querySelector('.modal-send_bl');
-  const modalWindow = document.querySelector('.modal-window_bl');
 
   let isValid = true;
 
@@ -80,8 +79,8 @@ document.querySelector('.div_send_bl').addEventListener('click', () => {
 
   // Если все поля валидны, скрываем модальное окно и показываем сообщение
   if (isValid) {
-    modalWindow.style.display = 'none';
-    modalSend.style.display = 'flex';
+    modWindow.style.display = 'none';
+    modSend.style.display = 'flex';
   }
 });
 
@@ -92,33 +91,41 @@ function clearInputs() {
   const phoneInput = document.getElementById('phone');
 
   nameInput.value = '';
-  nameInput.classList = '';
+  nameInput.classList = 'imp';
   emailInput.value = '';
-  emailInput.classList = '';
+  emailInput.classList = 'imp';
   phoneInput.value = '';
-  phoneInput.classList = '';
-
+  phoneInput.classList = 'imp';
 }
 
 // Закрытие модального окна по кнопке
-if (closeModalButton) {
-  closeModalButton.addEventListener('click', () => {
-    if (modalOverlay && modalWindow) {
-      modalOverlay.style.display = 'none';
-      modalWindow.style.display = 'none';
-      modalSend.style.display = 'none';
+if (closeButton) {
+  closeButton.addEventListener('click', () => {
+    if (modOverlayBl && modWindow) {
+      modOverlayBl.style.display = 'none';
+      modWindow.style.display = 'none';
+      clearInputs(); // Очищаем поля ввода
+    }
+  });
+}
+
+if (closeBut) {
+  closeBut.addEventListener('click', () => {
+    if (modOverlayBl && modSend) {
+      modOverlayBl.style.display = 'none';
+      modSend.style.display = 'none';
       clearInputs(); // Очищаем поля ввода
     }
   });
 }
 
 // Закрытие модального окна по клику вне окна
-if (modalOverlay) {
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      modalOverlay.style.display = 'none';
-      modalWindow.style.display = 'none';
-      modalSend.style.display = 'none';
+if (modOverlayBl) {
+  modOverlayBl.addEventListener('click', (e) => {
+    if (e.target === modOverlayBl) {
+      modOverlayBl.style.display = 'none';
+      modWindow.style.display = 'none';
+      modSend.style.display = 'none';
       clearInputs(); // Очищаем поля ввода
     }
   });

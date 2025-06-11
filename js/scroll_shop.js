@@ -3,7 +3,8 @@ const merchContainer = document.querySelector('.div_merch');
 const merchCards = merchContainer.querySelectorAll('.merch');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modalWindow = document.querySelector('.modal-window');
-const closeModalButton = document.querySelector('.modal-close');
+const closeModalButton = document.querySelector('.mod-close');
+const closeModalBut = document.querySelector('.send-close');
 const modalSend = document.querySelector('.modal-send');
 
 // Горизонтальный скролл по колесу мыши
@@ -154,6 +155,15 @@ if (closeModalButton) {
     if (modalOverlay && modalWindow) {
       modalOverlay.style.display = 'none';
       modalWindow.style.display = 'none';
+      clearInputs(); // Очищаем поля ввода
+    }
+  });
+}
+
+if (closeModalBut) {
+  closeModalBut.addEventListener('click', () => {
+    if (modalOverlay && modalSend) {
+      modalOverlay.style.display = 'none';
       modalSend.style.display = 'none';
       clearInputs(); // Очищаем поля ввода
     }
