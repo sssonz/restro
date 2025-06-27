@@ -12,6 +12,12 @@ body{
     cursor: none;
 }
 
+a, button, input, select, textarea, label, [role="button"], [tabindex],
+.logo, .img_circle, .img_circle_bl, .more-close, .h5_med_404, .soc, .modal-close, .modal-close_bl, .mod-close, .mod-close_bl,
+.send-close, .send-close_bl, .mer {
+  cursor: none !important;
+}
+
 #custom-cursor {
   position: fixed;
   top: 0;
@@ -21,12 +27,11 @@ body{
   border-radius: 50%;
   pointer-events: none;
   mix-blend-mode: difference;
-  background: #fef8ee;
+  background: #fffbf3;
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
   z-index: 9999;
 }
-
 #custom-cursor.cursor-hover {
   width: 35px;
   height: 35px;
@@ -186,7 +191,7 @@ li a:hover:before{
     gap: 0.1vw;
 }
 
-.h5_med{
+.h5_med, .h5_med_404{
     text-decoration: none;
     color: #797672;
     font-family: 'h5_medium';

@@ -1,0 +1,71 @@
+body, html {
+  scrollbar-width: none; 
+  overflow-y: scroll
+}
+
+.body_rest{
+    width: 100vw;
+    background-color: #1F1F1F;
+    display: block;
+    overflow-y: auto;
+}
+
+.more_text{
+    display: flex;
+    position: fixed; 
+    top: 2.6042vw; 
+    left: 2.6042vw;
+    z-index: 4;
+    width: 94.7917vw;
+    justify-content: space-between;
+}
+
+h1{
+    width: 22.1354vw;
+}
+
+.more_ph{
+    display: flex;
+    gap: 2.6042vw;
+    height: 37.3958vw;
+    margin-top: 16.2500vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.more_ph::-webkit-scrollbar {
+  display: none;
+}
+
+.mor_ph{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.ph_text{
+    display: flex;
+    width: 15.3646vw;
+    flex-direction: column;
+    gap: 1.0417vw;
+    margin-top: 5.2083vw;
+    margin-left: 82.0313vw;
+}
+
+.ph_t{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.h6_regular{
+    line-height: 1.0417vw;
+}
+
+.ph_more{
+    width: 100%;
+    bottom: 0;
+}
+
+.div_imp{
+    display: block;
+}

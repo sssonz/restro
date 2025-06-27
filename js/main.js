@@ -1,9 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // При клике на .logo открываем index.html
+  const el = document.querySelector('.h5_med_404');
+if (el) {
+  el.addEventListener('click', () => {
+    window.location.href = '404.html';
+  });
+}
   const logo = document.querySelector('.logo');
   if (logo) {
     logo.addEventListener('click', () => {
       window.location.href = 'index.html';
+    });
+  }
+    const more = document.querySelector('.more-close');
+  if (more) {
+    more.addEventListener('click', () => {
+      window.location.href = 'station.html';
     });
   }
 });

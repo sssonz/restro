@@ -86,10 +86,42 @@ p{
 }
 
 .mer_9, .mer_8, .mer_7, .mer_6, .mer_5, .mer_4, .mer_3, .mer_2, .mer_1{
-    background-image: url(../img/mer_9.svg);
+    background-image: url(../img/mer_9.png);
     height: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+.mer_8{
+    background-image: url(../img/mer_8.png);
+}
+
+.mer_7{
+    background-image: url(../img/mer_7.png);
+}
+
+.mer_6{
+    background-image: url(../img/mer_6.png);
+}
+
+.mer_5{
+    background-image: url(../img/mer_5.png);
+}
+
+.mer_4{
+    background-image: url(../img/mer_4.png);
+}
+
+.mer_3{
+    background-image: url(../img/mer_3.png);
+}
+
+.mer_2{
+    background-image: url(../img/mer_2.png);
+}
+
+.mer_1{
+    background-image: url(../img/mer_1.png);
 }
 
 .modal-overlay, .modal-overlay_bl{
@@ -134,7 +166,7 @@ p{
     align-items: center;
 }
 
-.mer, .modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl{
+.mer, .modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl, .more-close{
     width: 2.2917vw;
     height: 2.2917vw;
     border-radius: 50px;
@@ -147,7 +179,7 @@ p{
     cursor: pointer;
 }
 
-.modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl{
+.modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl, .more-close{
     background-image: url(../img/Close.svg);
     background-size: 45%;
     transition: background-color 0.3s ease;
