@@ -1,4 +1,5 @@
 let scrollPosition = 0;
+const scr_but = document.querySelector('.scroll');
 
 const sections = [
 {
@@ -65,6 +66,7 @@ if (scrollPosition >= start && scrollPosition < end) {
   const offset = Math.min(localScroll, SECTION_WIDTH);
 
   if (animated) {
+    scr_but.style.display ='none';
     img.style.transform = `translateX(${-offset}px)`;
     text.style.transform = `translateX(${offset}px)`;
   } else {

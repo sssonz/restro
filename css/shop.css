@@ -1,6 +1,7 @@
 .body_shop{
     height: 213vh;
     overflow: hidden;
+    justify-items: center;
 }
 
 .div_shop{

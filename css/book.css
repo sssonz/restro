@@ -1,6 +1,7 @@
 .body_book{
     background-color: #1F1F1F;
     overflow: hidden;
+    justify-items: center;
 }
 
 .container {
@@ -11,41 +12,43 @@
     color: #F3EBDD;
 }
 
-.img_book_1{
+.img_book_1, .img_book_2, .img_book_3, .img_book_4, .img_book_5, .img_book_6{
     position: fixed;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+
+.img_book_1{
     bottom: 13.8889vh;
     width: 46.3542vw;
+    left: 0;
 }
 
 .img_book_2{
-    position: fixed;
     top: 13.8889vh;
     left: 21.8750vw;
     width: 47.9167vw;
 }
 
 .img_book_3{
-    position: fixed;
     top: 36vh;
     width: 42.7083vw;
     right: 0;
 }
 
 .img_book_4{
-    position: fixed;
     top: 18.5185vh;
     width: 36.9792vw;
+    left: 0;
 }
 
 .img_book_5{
-    position: fixed;
     bottom: 11.1111vh;
     width: 63.5417vw;
     right: 5.2083vw;
 }
 
 .img_book_6{
-    position: fixed;
     top: 30vh;
     width: 68.7500vw;
     left: 4vw;

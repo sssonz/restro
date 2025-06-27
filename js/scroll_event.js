@@ -5,6 +5,7 @@ const closeBut = document.querySelector('.send-close_bl');
 const modOverlayBl = document.querySelector('.modal-overlay_bl');
 const modSend = document.querySelector('.modal-send_bl');
 const modWindow = document.querySelector('.modal-window_bl');
+const scr_but = document.querySelector('.scroll');
 
 // Горизонтальный скролл по колесу мыши
 document.addEventListener('wheel', (event) => {
@@ -17,6 +18,7 @@ document.addEventListener('wheel', (event) => {
   const maxScroll = evenContainer.scrollWidth - window.innerWidth;
   scrollPos = Math.max(0, Math.min(scrollPos, maxScroll));
 
+  scr_but.style.display ='none';
   evenContainer.style.transform = `translateX(${scrollPos}px)`;
 }, { passive: false });
 

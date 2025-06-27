@@ -1,6 +1,7 @@
 html, body, .div_main {
     width: 100%;
     height: 100%;
+    cursor: none;
 }
 
 body{
@@ -8,10 +9,32 @@ body{
     overscroll-behavior: none;
     background-color: #F3EBDD;
     height: 100%;
+    cursor: none;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background: #fef8ee;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  z-index: 9999;
+}
+
+#custom-cursor.cursor-hover {
+  width: 35px;
+  height: 35px;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
+    cursor: none;
 }
 
 .logo{

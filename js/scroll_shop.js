@@ -6,6 +6,7 @@ const modalWindow = document.querySelector('.modal-window');
 const closeModalButton = document.querySelector('.mod-close');
 const closeModalBut = document.querySelector('.send-close');
 const modalSend = document.querySelector('.modal-send');
+const scr_but = document.querySelector('.scroll');
 
 // Горизонтальный скролл по колесу мыши
 document.addEventListener('wheel', (event) => {
@@ -18,6 +19,7 @@ document.addEventListener('wheel', (event) => {
   const maxScroll = merchContainer.scrollWidth * 1.035 - window.innerWidth;
   scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
 
+  scr_but.style.display ='none';
   merchContainer.style.transform = `translateX(${scrollPosition}px)`;
 }, { passive: false });
 
