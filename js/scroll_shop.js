@@ -8,23 +8,41 @@ const closeModalBut = document.querySelector('.send-close');
 const modalSend = document.querySelector('.modal-send');
 const scr_but = document.querySelector('.scroll');
 
-// Горизонтальный скролл по колесу мыши
-document.addEventListener('wheel', (event) => {
-  event.preventDefault();
-  // Учитываем только вертикальную прокрутку для горизонтального движения
-  scrollPosition += event.deltaY;
-  scrollPosition -= event.deltaX;
+const isMobileOrTablet = window.innerWidth <= 769;
 
-  // Ограничиваем в пределах
-  const maxScroll = merchContainer.scrollWidth * 1.035 - window.innerWidth;
-  scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
+// Горизонтальный скролл по колесу мыши (десктоп)
+if (!isMobileOrTablet) {
+  document.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    // Учитываем только вертикальную прокрутку для горизонтального движения
+    scrollPosition += event.deltaY;
+    scrollPosition -= event.deltaX;
 
-  scr_but.style.display ='none';
-  merchContainer.style.transform = `translateX(${scrollPosition}px)`;
-}, { passive: false });
+    // Ограничиваем в пределах
+    const maxScroll = merchContainer.scrollWidth * 1.035 - window.innerWidth;
+    scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
 
-// Функция увеличения карточки и шрифтов при наведении
+    if (scr_but) scr_but.style.display = 'none';
+    merchContainer.style.transform = `translateX(${scrollPosition}px)`;
+  }, { passive: false });
+}
+// Вертикальный скролл вниз по колесу мыши (планшет и мобила)
+else {
+  document.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    scrollPosition += event.deltaY;
+
+    // Ограничиваем в пределах по высоте контейнера
+    const maxScroll = merchContainer.scrollHeight * 1.035 - window.innerHeight;
+    scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
+
+    if (scr_but) scr_but.style.display = 'none';
+    merchContainer.style.transform = `translateY(${-scrollPosition}px)`;
+  }, { passive: false });
+}
+
 function enlargeCard(card) {
+  if (isMobileOrTablet) return;
   card.style.width = '23.3333vw';
   card.style.height = '24.9479vw';
   card.style.transition = 'width 0.3s ease, height 0.3s ease';
@@ -47,8 +65,8 @@ function enlargeCard(card) {
   }
 }
 
-// Функция возврата к исходным размерам и шрифтам
 function resetCard(card) {
+  if (isMobileOrTablet) return;
   card.style.width = '';
   card.style.height = '';
   const h6 = card.querySelector('.h6_medium');
@@ -66,18 +84,15 @@ function resetCard(card) {
   }
 }
 
-// Функция изменения цвета .mer при наведении
 function changeMerColor(merDiv) {
   merDiv.style.transition = 'background-color 0.3s ease';
   merDiv.style.backgroundColor = '#1F1F1F';
 }
 
-// Функция сброса цвета .mer
 function resetMerColor(merDiv) {
   merDiv.style.backgroundColor = '';
 }
 
-// Навешиваем обработчики на каждую карточку
 merchCards.forEach(card => {
   card.addEventListener('mouseenter', () => {
     enlargeCard(card);
@@ -129,14 +144,12 @@ document.querySelector('.div_send').addEventListener('click', () => {
     isValid = false;
   }
 
-  // Если все поля валидны, скрываем модальное окно и показываем сообщение
   if (isValid) {
     modalWindow.style.display = 'none';
     modalSend.style.display = 'flex';
   }
 });
 
-// Функция для очистки полей ввода
 function clearInputs() {
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
@@ -148,16 +161,14 @@ function clearInputs() {
   emailInput.classList = '';
   phoneInput.value = '';
   phoneInput.classList = '';
-
 }
 
-// Закрытие модального окна по кнопке
 if (closeModalButton) {
   closeModalButton.addEventListener('click', () => {
     if (modalOverlay && modalWindow) {
       modalOverlay.style.display = 'none';
       modalWindow.style.display = 'none';
-      clearInputs(); // Очищаем поля ввода
+      clearInputs();
     }
   });
 }
@@ -167,19 +178,18 @@ if (closeModalBut) {
     if (modalOverlay && modalSend) {
       modalOverlay.style.display = 'none';
       modalSend.style.display = 'none';
-      clearInputs(); // Очищаем поля ввода
+      clearInputs();
     }
   });
 }
 
-// Закрытие модального окна по клику вне окна
 if (modalOverlay) {
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) {
       modalOverlay.style.display = 'none';
       modalWindow.style.display = 'none';
       modalSend.style.display = 'none';
-      clearInputs(); // Очищаем поля ввода
+      clearInputs();
     }
   });
 }

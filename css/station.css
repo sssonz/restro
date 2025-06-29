@@ -42,7 +42,7 @@
     background-image: url(../img/st_sl.svg);
 }
 
-.grid_photo{
+.grid_photo, .grid_photo_pl{
     position: fixed;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -55,7 +55,7 @@
     height: 75.4630vh;
 }
 
-.img_st_1, .img_st_2, .img_st_3, .img_st_4, .img_st_5, .img_st_6, .img_st_7, .img_st_8, .img_st_9, .img_st_10, .img_st_11, .img_st_12, .img_st_13, .img_st_14, .img_st_15, .img_st_16, .img_st_17, .img_st_18{
+.img_st_1, .img_st_2, .img_st_3, .img_st_4, .img_st_5, .img_st_6, .img_st_7, .img_st_8, .img_st_9, .img_st_10, .img_st_11, .img_st_12, .img_st_13, .img_st_14, .img_st_15, .img_st_16, .img_st_17, .img_st_18, .img_st_1_pl, .img_st_2_pl, .img_st_3_pl, .img_st_4_pl, .img_st_5_pl, .img_st_6_pl, .img_st_7_pl, .img_st_8_pl, .img_st_9_pl{
     border-radius: 20px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -96,4 +96,8 @@
 
 .active_bl{
     color: #F3EBDD;
+}
+
+.grid_photo_pl{
+    display: none;
 }

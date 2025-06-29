@@ -37,10 +37,15 @@ h1{
   display: none;
 }
 
-.mor_ph{
+.mor_ph, .mor_ph_pl{
     border-radius: 20px;
     width: 100%;
     height: 100%;
+}
+
+.mor_ph_pl{
+    display: none;
+    width: 92.1875vw;
 }
 
 .ph_text{
@@ -68,4 +73,71 @@ h1{
 
 .div_imp{
     display: block;
+}
+
+#div_m_1{
+    position: static;
+    margin-top: 18.2292vw;
+    margin-left: 42.3438vw;
+}
+
+#p_m_1{
+    width: 15.3646vw;
+}
+
+#p_m_2{
+    width: 31.2500vw;
+    margin-top: 18.2292vw;
+    margin-left: 58.2292vw;
+}
+
+#div_m_2{
+    width: 31.2500vw;
+    margin-left: 2.6042vw;
+}
+
+#div_m_3{
+    margin-top: 18.2292vw;
+}
+
+#div_m_4{
+    position: static;
+    margin-top: 18.2292vw;
+    margin-left: 10.5729vw;
+}
+
+#div_m_5{
+    width: 31.2500vw;
+    margin-left: 50.2604vw;
+}
+
+#p_m_3{
+    width: 23.2813vw;
+    margin-top: 18.2292vw;
+    margin-left: 74.1146vw;
+}
+
+#div_m_6{
+    width: 55.1042vw;
+    margin-left: 2.6042vw;
+}
+
+#div_m_7{
+    margin-top: 18.2292vw;
+    margin-left: 66.1458vw;
+    gap: 1.0417vw;
+    height: 9.5vw;
+}
+
+#p_m_4{
+    width: 25vw;
+    color: #797672;
+}
+
+#div_m_8{
+    position: relative;
+    width: fit-content;
+    margin-top: -1.1vw;
+    right: -15.52vw;
+    overflow: visible;
 }

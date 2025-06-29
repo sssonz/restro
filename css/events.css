@@ -7,6 +7,14 @@
     justify-items: end;
 }
 
+#nav{
+    display: block;
+}
+
+#nav_bl{
+    display: none;
+}
+
 .div_even{
     display: flex;
     height: 75.7407vh;
@@ -82,4 +90,12 @@
 .div_visit{
     background-color: #F3EBDD;
     cursor: pointer;
+}
+
+#log_bl{
+    display: none;
+}
+
+.div_even_pl{
+    display: none;
 }

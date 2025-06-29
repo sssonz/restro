@@ -1,5 +1,5 @@
 /* Вертикальная ориентация для планшета (768px) */
-@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
+@media screen and (min-width: 200px) and (max-width: 960px) and (orientation: portrait) {
 .div_main {
     padding: 1.3021vw;
 }
@@ -39,9 +39,9 @@
 }
 
 .li_nav, .li_nav_active, .li_nav_active_bl {
-    padding: 1vw 1.1719vw 1.1719vw 1.1719vw;
+    padding: 1.06vw 1.1719vw 1.1719vw 1.1719vw;
     height: 3.7760vw;
-    line-height: 7vw;
+    line-height: 3.9vw;
 }
 
 a {
@@ -104,7 +104,7 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 2.6042vw;
-    z-index: 2;
+    z-index: 5;
 }
 
 .mail, .service, .contacts {
@@ -116,7 +116,7 @@ nav {
 }
 
 input {
-    width: 51.5625vw;
+    width: 46.8750vw;
     border: 0.1302vw solid #F3EBDD;
     font-size: 2.0833vw;
     line-height: 2.6042vw;
@@ -164,7 +164,7 @@ p {
 
 .div_text {
     width: 45.4427vw;
-    gap: 2.6042vw;
+    gap: 1.9531vw;
     top: 9.9609vh;
     right: 3.9063vw;
 }
@@ -183,8 +183,325 @@ p {
     display: block;
 }
 
+.d_404_lf, .d_404_rt {
+    display: flex;
+    justify-content: center;
+}
+
 .div_back {
     top: 74%;
+}
+
+.h6_regular {
+    line-height: 1.8229vw;
+    font-size: 1.5625vw;
+    width: 46.8750vw;
+}
+
+.mer, .modal-close, .modal-close_bl, .mod-close, .mod-close_bl, .send-close, .send-close_bl, .more-close {
+    width: 4.1667vw;
+    height: 4.1667vw;
+}
+
+.modal-send, .modal-sub, .modal-sub_bl, .modal-send_bl {
+    padding: 1.9531vw 1.9531vw 2.6042vw 1.9531vw;
+    gap: 1.3021vw;
+}
+
+.mod {
+    width: 46.8750vw;
+}
+
+.modal-window, .modal-window_bl {
+    width: 54.6875vw;
+    height: 42vw;
+    padding-top: 3.2552vw;
+    gap: 1.9531vw;
+}
+
+.imput {
+    gap: 1.9531vw;
+}
+
+.div_send, .div_send_bl {
+    width: 46.8750vw;
+}
+
+.send, .send_bl {
+    font-size: 2.0833vw;
+}
+
+h1 {
+    font-size: 6.7708vw;
+    width: 44vw;
+}
+
+.more_text {
+    top: 3.9063vw;
+    left: 3.9063vw;
+    width: 92.1875vw;
+}
+
+.more_ph {
+    gap: 3.9063vw;
+    height: 93.4896vw;
+    margin-top: 35.9375vw;
+}
+
+.mor_ph{
+    display: none;
+}
+
+.mor_ph_pl{
+    display: block;
+}
+
+#div_m_1{
+    margin-top: 20.8333vw;
+    margin-left: 19.5313vw;
+}
+
+.ph_text {
+    width: 29.8177vw;
+    gap: 1.9531vw;
+    margin-top: 10.4167vw;
+    margin-left: 66.2760vw;
+}
+
+#p_m_1{
+    width: 29.8177vw;
+}
+
+#p_m_2{
+    width: 45.4427vw;
+    margin-top: 20.8333vw;
+    margin-left: 50.6510vw;
+}
+
+#div_m_2{
+    width: 61.0677vw;
+    margin-left: 3.9063vw;
+}
+
+#div_m_3{
+    margin-top: 20.8333vw;
+}
+
+#div_m_4{
+    margin-top: 20.8333vw;
+    margin-left: 3.9063vw;
+}
+
+#div_m_5{
+    width: 31.2500vw;
+    margin-left: 50.6510vw;
+}
+
+#p_m_3{
+    width: 29.8177vw;
+    margin-top: 20.8333vw;
+    margin-left: 66.2760vw;
+}
+
+#div_m_6{
+    width: 55.1042vw;
+    margin-left: 3.9063vw;
+}
+
+#div_m_7{
+    margin-top: 20.8333vw;
+    margin-left: 44vw;
+    gap: 1.3021vw;
+    height: 17vw;
+}
+
+#p_m_4{
+    width: 53vw;
+    color: #797672;
+}
+
+#div_m_8{
+    margin-top: 12.4vw;
+    right: -34vw;
+}
+
+.img_book_1 {
+    bottom: 10vh;
+    width: 90vw;
+}
+
+.img_book_2 {
+    top: 31vh;
+    left: 4vw;
+    width: 80vw;
+}
+
+.img_book_3 {
+    top: 42vh;
+    width: 75vw;
+}
+
+.img_book_4 {
+    top: 14vh;
+    width: 47vw;
+}
+
+.img_book_5 {
+    bottom: 18vh;
+    width: 115vw;
+    right: -6vw;
+}
+
+.img_book_6 {
+    width: 125vw;
+    left: 0vw;
+    top: 32vh
+}
+
+.scroll {
+    bottom: 13.0208vw;
+    padding: 0.35vw 1.5625vw 0.3906vw 1.5625vw;
+}
+
+.h6_medium {
+    font-size: 1.5625vw;
+}
+
+#div_sh{
+    
+    top: 12.2070vh;
+    left: 3.9063vw;
+    right: 0;
+}
+
+.div_shop {
+    transform: translateY(-56.5%);
+    justify-content: flex-start;
+}
+
+.div_merch {
+    flex-direction: column;
+    height: auto;
+    gap: 1.3021vw;
+    margin-top: 3.9063vw;
+    margin-bottom: 13.0208vw;
+    margin-right: 3.9063vw;
+}
+
+.merch {
+    gap: 0.6510vw;
+    height: 49.0885vw;
+    width: 45.4427vw;
+}
+
+.text_merch {
+    gap: 0.6510vw;
+}
+
+.h5_medium {
+    font-size: 2.0833vw;
+}
+
+.mer_9, .mer_8, .mer_7, .mer_6, .mer_5, .mer_4, .mer_3, .mer_2, .mer_1 {
+    padding-right: 1.3021vw;
+    padding-bottom: 1.3021vw;
+}
+
+.mer{
+    width: 4.8177vw;
+    height: 4.8177vw;
+}
+
+.body_events {
+    margin-top: -2.5vw;
+    justify-items: center;
+}
+
+.div_even {
+    display: none;
+}
+
+.div_even_pl{
+    display: flex;
+    gap: 1.3021vw;
+    margin-top: 3.9063vw;
+}
+
+.even_pl_1, .even_pl_2{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3021vw;
+}
+
+.even_pl_1{
+    margin-top: -33vw;
+}
+
+.img_even{
+    width: 48.0469vw;
+    height: auto;
+}
+
+#log{
+    display: none;
+}
+
+#log_bl{
+    display: block;
+}
+
+#nav{
+    display: none;
+}
+
+#nav_bl{
+    display: block;
+}
+
+.st_fr, .st_am, .st_yp, .st_it, .st_sl {
+    background-size: 148%;
+}
+
+.grid_photo{
+    display: none;
+}
+
+.grid_photo_pl{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    left: 3.9063vw;
+    top: 10.7422vh;
+    width: 92.1875vw;
+    height: 78.3203vh;
+}
+
+.img_st_1_pl { grid-area: 1 / 1 / 2 / 2; background-image: url(../img/st_1_pl.png);}
+.img_st_2_pl { grid-area: 1 / 2 / 2 / 3; background-image: url(../img/st_2_pl.png);}
+.img_st_3_pl { grid-area: 1 / 3 / 2 / 4; background-image: url(../img/st_3_pl.png);}
+.img_st_4_pl { grid-area: 2 / 1 / 3 / 2; background-image: url(../img/st_4_pl.png);}
+.img_st_5_pl { grid-area: 2 / 2 / 3 / 3; background-image: url(../img/st_5_pl.png);}
+.img_st_6_pl { grid-area: 2 / 3 / 3 / 4; background-image: url(../img/st_6_pl.png);}
+.img_st_7_pl { grid-area: 3 / 1 / 4 / 2; background-image: url(../img/st_7_pl.png);}
+.img_st_8_pl { grid-area: 3 / 2 / 4 / 3; background-image: url(../img/st_8_pl.png);}
+.img_st_9_pl { grid-area: 3 / 3 / 4 / 4; background-image: url(../img/st_9_pl.png);}
+
+.div_ab, .div_st, .div_sh, .div_ev, .div_bo {
+    padding: 1.3021vw;
+    height: 100%;
+    flex-direction: column;
+    gap: 1.3021vw;
+    width: 100%;
+}
+
+.ab_img, .ab, .st_img, .st, .sh_img, .sh, .ev_img, .ev, .bo_img, .bo {
+    width: auto;
+}
+
+.div_text_ab {
+    width: 45.4427vw;
+    gap: 1.285vw;
+    margin-top: 6.7708vw;
+    margin-right: 3.9063vw;
 }
 }
 
