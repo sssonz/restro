@@ -22,8 +22,8 @@ a, button, input, select, textarea, label, [role="button"], [tabindex],
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 1.0417vw;
+  height: 1.0417vw;
   border-radius: 50%;
   pointer-events: none;
   mix-blend-mode: difference;
@@ -33,8 +33,8 @@ a, button, input, select, textarea, label, [role="button"], [tabindex],
   z-index: 9999;
 }
 #custom-cursor.cursor-hover {
-  width: 35px;
-  height: 35px;
+  width: 1.8229vw;
+  height: 1.8229vw;
 }
 
 *, *::before, *::after {
@@ -198,6 +198,11 @@ li a:hover:before{
     font-size: 1.0417vw;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.div_ser_cont{
+    display: flex;
+    gap: 10.0521vw;
 }
 
 .social{

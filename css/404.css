@@ -24,8 +24,12 @@ body {
     overflow: hidden;
 }
 
-.img_404{
+.img_404, .img_404_pl, .img_404_mob{
     height: 100%;
+}
+
+.img_404_pl, .img_404_mob{
+    display: none;
 }
 
 .d_404_lf{
