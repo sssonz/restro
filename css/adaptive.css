@@ -506,5 +506,13 @@ h1 {
 }
 
 @media screen and (max-width: 415px) and (orientation: portrait) {
+.div_main {
+    padding: 2.4155vw;
+}
 
+.logo {
+    top: 6.0386vw;
+    left: 6.0386vw;
+    height: 6.0386vw;
+}
 }
