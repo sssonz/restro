@@ -515,4 +515,16 @@ h1 {
     left: 6.0386vw;
     height: 6.0386vw;
 }
+
+.img_404_pl{
+    display: none;
+}
+
+.img_404_mob{
+    display: block;
+}
+
+.div_back {
+    top: 62%;
+}
 }
